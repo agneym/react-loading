@@ -1,9 +1,7 @@
 import React from "react";
+import { CommonLoaderProps } from '../CommonLoaderProps';
 
-interface Props {
-  height?: string | number;
-  width?: string | number;
-  color?: string;
+interface Props extends CommonLoaderProps {
   radius?: number;
 }
 

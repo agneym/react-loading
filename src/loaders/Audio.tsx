@@ -1,18 +1,15 @@
 import React from "react";
 
-interface Props {
-  height?: number | string;
-  width?: number | string;
-  color?: string;
-}
+import { CommonLoaderProps } from '../CommonLoaderProps';
 
-export const Audio = ({ height, width, color = 'currentColor', ...rest }: Props) => (
+export const Audio = ({ height, width, color = 'currentColor', ...rest }: CommonLoaderProps) => (
   <svg
     height={height}
     width={width}
     fill={color}
     viewBox="0 0 55 80"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
     {...rest}
   >
     <g transform="matrix(1 0 0 -1 0 80)">

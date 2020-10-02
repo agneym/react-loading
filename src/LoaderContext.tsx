@@ -15,7 +15,7 @@ const defaultValue = {
 const LoaderContext = createContext<ContextProps>(defaultValue);
 export const useLoaderContext = useContext(LoaderContext);
 
-export const LoaderContextProvider = ({ indicator, children }: ProviderProps) => {
+export const LoaderProvider = ({ indicator, children }: ProviderProps) => {
   const value = useMemo(() => ({
     indicator: indicator,
   }), [indicator]);
