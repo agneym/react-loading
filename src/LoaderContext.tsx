@@ -13,7 +13,7 @@ const defaultValue = {
 }
 
 const LoaderContext = createContext<ContextProps>(defaultValue);
-export const useLoaderContext = useContext(LoaderContext);
+export const useLoaderContext = () => useContext(LoaderContext);
 
 export const LoaderProvider = ({ indicator, children }: ProviderProps) => {
   const value = useMemo(() => ({

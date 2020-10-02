@@ -12,6 +12,7 @@ export const BallTriangle = ({ height, width, color = 'currentColor', radius = 5
     stroke={color}
     viewBox="0 0 57 57"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
     {...rest}
   >
     <g fill="none" fillRule="evenodd">
