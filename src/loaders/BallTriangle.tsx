@@ -7,13 +7,14 @@ interface Props {
   radius?: number;
 }
 
-export const BallTriangle = ({ height, width, color = 'currentColor', radius = 5 }: Props) => (
+export const BallTriangle = ({ height, width, color = 'currentColor', radius = 5, ...rest }: Props) => (
   <svg
     height={height}
     width={width}
     stroke={color}
     viewBox="0 0 57 57"
     xmlns="http://www.w3.org/2000/svg"
+    {...rest}
   >
     <g fill="none" fillRule="evenodd">
       <g transform="translate(1 1)" strokeWidth="2">
