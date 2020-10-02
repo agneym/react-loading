@@ -1,17 +1,17 @@
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 
 interface Props {
   loading?: boolean;
-  indicator?: ReactElement;
+  indicator: ReactNode;
 }
 
 export function useLoading({ loading = false, indicator }: Props) {
   const containerProps = {
     'aria-busy': loading,
-    'aria-live': 'polite',
+    'aria-live': 'polite' as "off" | "assertive" | "polite" | undefined,
   };
   return {
     containerProps,
-    Indicator: loading ? indicator : null,
+    indicatorEl: loading ? indicator : null,
   }
 }

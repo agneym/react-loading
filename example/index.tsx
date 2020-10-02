@@ -1,12 +1,16 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../.';
+import { useLoading, Audio } from '../.';
 
 const App = () => {
+  const { containerProps, indicatorEl } = useLoading({
+    indicator: <Audio />,
+    loading: true,
+  });
   return (
-    <div>
-      <Thing />
+    <div {...containerProps}>
+      {indicatorEl}
     </div>
   );
 };

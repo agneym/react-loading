@@ -1,9 +1,9 @@
 import React from "react";
 
 interface Props {
-  height: number | string;
-  width: number | string;
-  color: string;
+  height?: number | string;
+  width?: number | string;
+  color?: string;
 }
 
 export const Audio = ({ height, width, color = 'currentColor', ...rest }: Props) => (
