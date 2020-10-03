@@ -1,5 +1,5 @@
 {
-  "name": "new-spinner",
+  "name": "@agney/react-loading",
   "author": "Agney <agney@outlook.in>",
   "version": "0.1.0",
   "license": "MIT",
@@ -37,14 +37,14 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "module": "dist/new-spinner.esm.js",
+  "module": "dist/react-loading.esm.js",
   "size-limit": [
     {
-      "path": "dist/new-spinner.cjs.production.min.js",
+      "path": "dist/react-loading.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/new-spinner.esm.js",
+      "path": "dist/react-loading.esm.js",
       "limit": "10 KB"
     }
   ],

@@ -1,7 +1,7 @@
 html {
   height: 100%;
-  background: #3023ae;
-  background: linear-gradient(135deg,  #3023ae 0%,#c86dd7 100%);
+  background: #005bea;
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
   background-attachment: fixed;
 }
 
@@ -10,33 +10,44 @@ body {
   font-weight: 300;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+section {
+  display: block;
+  width: 720px;
+  margin: 5rem auto;
+}
+
 a {
-  color: #fff;
+  color: #FFFFFF;
 }
 
 ul {
-  background: #fff;
-  width: 720px;
-  margin: auto;
-  margin-top: 60px;
+  background: #FFFFFF;
   list-style: none;
   padding: 0;
-  -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.37);
-  box-shadow:      0px 0px 4px 0px rgba(0,0,0,0.37);
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.37);
+  display: flex;
+  flex-wrap: wrap;
 }
+
 ul li {
   width: 180px;
   height: 180px;
   line-height: 176px;
   text-align: center;
-  float: left;
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
 }
+
 ul li svg {
   vertical-align: middle;
 }
+
 li:nth-child(1) {
   background-color: #1ABC9C;
 }
@@ -72,4 +83,10 @@ li:nth-child(11) {
 }
 li:nth-child(12) {
   background-color: #E74C3C;
+}
+
+code {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  display: block;
 }

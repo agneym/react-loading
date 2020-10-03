@@ -4,11 +4,17 @@ import * as ReactDOM from 'react-dom';
 
 import './styles.css';
 import IconList from './src/IconList';
+import Docs from './src/Docs';
 
 const App = () => {
   return (
     <main>
-      <IconList />
+      <section>
+        <IconList />
+      </section>
+      <section>
+        <Docs />
+      </section>
     </main>
   )
 };
