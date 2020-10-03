@@ -1,0 +1,15 @@
+html {
+  height: 100%;
+  background: #3023ae;
+  background: linear-gradient(135deg,  #3023ae 0%,#c86dd7 100%);
+  background-attachment: fixed;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: #fff;
+}
