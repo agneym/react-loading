@@ -19,7 +19,6 @@ export function useLoading({ loading = false, indicator }: Props) {
 
   const loaderContext = useLoaderContext();
   const indicatorEl = indicator ?? loaderContext?.indicator;
-  console.log(loaderContext)
 
   return {
     containerProps,
