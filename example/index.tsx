@@ -1,18 +1,16 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { useLoading, LoaderProvider, TailSpin } from '../.';
+
+import './styles.css';
+import IconList from './src/IconList';
 
 const App = () => {
-  const { containerProps, indicatorEl } = useLoading({
-    loading: true,
-  });
-  return <div {...containerProps}>{indicatorEl}</div>;
+  return (
+    <main>
+      <IconList />
+    </main>
+  )
 };
 
-ReactDOM.render(
-  <LoaderProvider indicator={<TailSpin stroke="red" />}>
-    <App />
-  </LoaderProvider>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
