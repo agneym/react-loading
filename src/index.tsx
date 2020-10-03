@@ -2,7 +2,5 @@ export { useLoading } from './useLoading';
 export { LoaderProvider } from './LoaderContext';
 
 // Loaders
-export { Audio } from './loaders/Audio';
-export { BallTriangle } from './loaders/BallTriangle';
-export { Bars } from './loaders/Bars';
-export { Circles } from './loaders/Circles';
+export { default as Audio } from './svg-loaders/audio.svg';
+export { default as BallTriangle } from './svg-loaders/ball-triangle.svg';
