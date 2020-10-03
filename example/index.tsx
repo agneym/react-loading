@@ -7,13 +7,12 @@ const App = () => {
   const { containerProps, indicatorEl } = useLoading({
     loading: true,
   });
-  return (
-    <LoaderProvider indicator={<BallTriangle />}>
-      <div {...containerProps}>
-        {indicatorEl}
-      </div>
-    </LoaderProvider>
-  );
+  return <div {...containerProps}>{indicatorEl}</div>;
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <LoaderProvider indicator={<BallTriangle />}>
+    <App />
+  </LoaderProvider>,
+  document.getElementById('root')
+);
