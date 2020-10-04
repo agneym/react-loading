@@ -73,5 +73,8 @@
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "tiny-invariant": "^1.1.0"
   }
 }

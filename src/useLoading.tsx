@@ -1,4 +1,5 @@
-import { cloneElement, ReactElement } from 'react';
+import { cloneElement, ReactElement, isValidElement } from 'react';
+import invariant from 'tiny-invariant';
 
 import { useLoaderContext } from './LoaderContext';
 
@@ -17,11 +18,15 @@ type AriaLive = 'off' | 'assertive' | 'polite' | undefined;
  * Hook returning Indicator element according to loading argument.
  * @example const { containerProps, indicatorEl } = useLoading({ loading: true })
  */
-export function useLoading({ loading = false, indicator, loaderProps }: Props) {
+export function useLoading({ loading = false, indicator, loaderProps = {} }: Props) {
   const containerProps = {
     'aria-busy': loading,
     'aria-live': 'polite' as AriaLive,
   };
+
+  const loaderContext = useLoaderContext();
+  const indicatorEl = indicator ?? loaderContext?.indicator;
+  invariant(isValidElement(indicatorEl), 'Expected a valid React element as indicator');
 
   const accessibleLoaderProps = (() => {
     const { valueText, ...rest } = loaderProps;
@@ -31,9 +36,6 @@ export function useLoading({ loading = false, indicator, loaderProps }: Props) {
       ...rest,
     }
   })();
-
-  const loaderContext = useLoaderContext();
-  const indicatorEl = indicator ?? loaderContext?.indicator;
   const accessibleIndicator = indicatorEl ? cloneElement(indicatorEl, accessibleLoaderProps) : null;
 
   return {

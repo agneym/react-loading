@@ -35,8 +35,8 @@ const spinners = [
 const IconList = () => {
   return (
     <ul>
-      {spinners.map(({ indicator: Indicator, width }) => (
-        <SpinnerSection indicator={<Indicator width={width} />} />
+      {spinners.map(({ indicator: Indicator, width }, index) => (
+        <SpinnerSection indicator={<Indicator width={width} key={index} />} />
       ))}
     </ul>
   );
