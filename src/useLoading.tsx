@@ -9,7 +9,7 @@ interface Props {
   loaderProps?: {
     /** Description of progressbar and what it is loading */
     valueText?: string;
-  }
+  };
 }
 
 type AriaLive = 'off' | 'assertive' | 'polite' | undefined;
@@ -18,7 +18,11 @@ type AriaLive = 'off' | 'assertive' | 'polite' | undefined;
  * Hook returning Indicator element according to loading argument.
  * @example const { containerProps, indicatorEl } = useLoading({ loading: true })
  */
-export function useLoading({ loading = false, indicator, loaderProps = {} }: Props) {
+export function useLoading({
+  loading = false,
+  indicator,
+  loaderProps = {},
+}: Props) {
   const containerProps = {
     'aria-busy': loading,
     'aria-live': 'polite' as AriaLive,
@@ -26,7 +30,10 @@ export function useLoading({ loading = false, indicator, loaderProps = {} }: Pro
 
   const loaderContext = useLoaderContext();
   const indicatorEl = indicator ?? loaderContext?.indicator;
-  invariant(isValidElement(indicatorEl), 'Expected a valid React element as indicator');
+  invariant(
+    isValidElement(indicatorEl),
+    'Expected a valid React element as indicator'
+  );
 
   const accessibleLoaderProps = (() => {
     const { valueText, ...rest } = loaderProps;
@@ -34,9 +41,11 @@ export function useLoading({ loading = false, indicator, loaderProps = {} }: Pro
       role: 'progressbar',
       'aria-valuetext': valueText,
       ...rest,
-    }
+    };
   })();
-  const accessibleIndicator = indicatorEl ? cloneElement(indicatorEl, accessibleLoaderProps) : null;
+  const accessibleIndicator = indicatorEl
+    ? cloneElement(indicatorEl, accessibleLoaderProps)
+    : null;
 
   return {
     containerProps,
