@@ -7,6 +7,8 @@ interface Props {
   indicator?: ReactNode;
 }
 
+type AriaLive = 'off' | 'assertive' | 'polite' | undefined;
+
 /**
  * Hook returning Indicator element according to loading argument.
  * @example const { containerProps, indicatorEl } = useLoading({ loading: true })
@@ -14,7 +16,7 @@ interface Props {
 export function useLoading({ loading = false, indicator }: Props) {
   const containerProps = {
     'aria-busy': loading,
-    'aria-live': 'polite' as "off" | "assertive" | "polite" | undefined,
+    'aria-live': 'polite' as AriaLive,
   };
 
   const loaderContext = useLoaderContext();
@@ -23,5 +25,5 @@ export function useLoading({ loading = false, indicator }: Props) {
   return {
     containerProps,
     indicatorEl: loading ? indicatorEl : null,
-  }
+  };
 }

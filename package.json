@@ -1,6 +1,5 @@
 {
   "name": "@agney/react-loading",
-  "author": "Agney <agney@outlook.in>",
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -13,6 +12,10 @@
   "sideEffects": false,
   "engines": {
     "node": ">=10"
+  },
+  "author": {
+    "name": "Boy with Silver Wings",
+    "email": "agney@outlook.in"
   },
   "scripts": {
     "start": "tsdx watch",
@@ -27,11 +30,6 @@
   },
   "peerDependencies": {
     "react": ">=16"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
   },
   "prettier": {
     "printWidth": 80,
@@ -58,6 +56,8 @@
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
     "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
@@ -65,5 +65,13 @@
     "tsdx": "^0.14.0",
     "tslib": "^2.0.1",
     "typescript": "^4.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
