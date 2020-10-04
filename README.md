@@ -34,23 +34,25 @@ yarn add @agney/react-loading
 
 ## Features
 
-- Small Size
+- **Small Size**
 
   The whole library is about [20kB minified](https://bundlephobia.com/result?p=@agney/react-loading). _But you would never need the whole bundle._
 
-  The library is build to be treeshakeable that when you use one or two of the bundled loaders, you would have less than 1kB in your bundle.
+  The library is build to be treeshakeable that when you use one or two of the bundled loaders, you would have **less than 1kB** in your bundle.
 
-- Accessibility
+  No dependencies either 😇
+
+- **Accessibility**
 
   Provides accessibility attributes on your loading components and containers.
 
   `aria-busy` is set to `true` on container on loading and progress indicators have `role=progressbar`.
 
-- Specify a Global loader
+- **Specify a Global loader**
 
   You probably don't want loader components mixed everywhere, so you can specify a `LoaderContext` that can be overridden later if necessary.
 
-- Bring your own loader
+- **Bring your own loader**
 
   If you decide to bring your own loading indicator, library would support that as well, keeping all your logic the same.
 
@@ -222,3 +224,7 @@ npm test
 ```
 
 Commands are available in detail on tsdx repository.
+
+# Credits
+
+- [Sam Herbert](http://samherbert.net/) for the amazing SVGs
