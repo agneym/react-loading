@@ -1,6 +1,7 @@
 {
   "name": "@agney/react-loading",
   "version": "0.1.2",
+  "description": "Simple and Accessible loading indicators with React.",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
