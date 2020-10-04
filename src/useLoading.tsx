@@ -6,7 +6,7 @@ import { useLoaderContext } from './LoaderContext';
 interface Props {
   loading?: boolean;
   indicator?: ReactElement | null;
-  loaderProps: {
+  loaderProps?: {
     /** Description of progressbar and what it is loading */
     valueText?: string;
   }
