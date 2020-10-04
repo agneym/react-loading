@@ -18,6 +18,10 @@ Simple and Accessible loading indicators with React.
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" />
 </a>
 
+Comes bundled with React components of [Sam Herbert's animated SVG loaders](https://github.com/SamHerbert/SVG-Loaders) in a tree shakeable package.
+
+![Example of loading indicator SVGs](./example/indicator.gif)
+
 ## Installation
 
 ```bash
@@ -27,6 +31,24 @@ yarn add @agney/react-loading
 ```
 
 [Demo](https://agneym.github.io/react-loading/)
+
+## Features
+
+- Small Size
+
+  The whole library is about [20kB minified](https://bundlephobia.com/result?p=@agney/react-loading). _But you would never need the whole bundle._
+
+  The library is build to be treeshakeable that when you use one or two of the bundled loaders, you would have less than 1kB in your bundle.
+
+- Accessibility
+
+  Provides accessibility attributes on your loading components and containers.
+
+  `aria-busy` is set to `true` on container on loading and progress indicators have `role=progressbar`.
+
+- Specify a global loader
+
+  You probably don't want loader components mixed everywhere, so you can specify a `LoaderContext` that can be overridden later if necessary.
 
 ## Usage
 
@@ -40,9 +62,8 @@ function Content() {
   });
 
   return (
+    {/* Accessibility props injected to container */}
     <section {...containerProps}>
-      {' '}
-      {/* Accessibility props injected to container */}
       {indicatorEl} {/* renders only while loading */}
     </section>
   );
