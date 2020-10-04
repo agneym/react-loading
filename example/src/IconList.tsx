@@ -27,9 +27,9 @@ const spinners = [
   { indicator: Oval, width: 50 },
   { indicator: Puff, width: 50 },
   { indicator: Rings, width: 60 },
-  { indicator: Audio, width: 50 },
   { indicator: TailSpin, width: 50 },
   { indicator: ThreeDots, width: 60 },
+  { indicator: SpinningCircles, width: 50 },
 ];
 
 const IconList = () => {

@@ -1,7 +1,7 @@
-import React, { createContext, ReactNode, useContext, useMemo } from 'react';
+import React, { createContext, ReactElement, ReactNode, useContext, useMemo } from 'react';
 
 interface ContextProps {
-  indicator: ReactNode;
+  indicator: ReactElement | null;
 }
 
 interface ProviderProps extends ContextProps {
