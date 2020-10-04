@@ -26,6 +26,8 @@ npm i @agney/react-loading
 yarn add @agney/react-loading
 ```
 
+[Demo](https://agneym.github.io/react-loading/)
+
 ## Usage
 
 ```javascript

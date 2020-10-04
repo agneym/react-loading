@@ -7,7 +7,7 @@ const Docs = () => {
       <code>
         npm install @agney/react-loading
       </code>
-      <p>For more detailed docs, visit Github page.</p>
+      <p>For more detailed docs, visit <a href="https://github.com/agneym/react-loading/settings">Github page</a></p>
     </>
   );
 }

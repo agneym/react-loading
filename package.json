@@ -95,5 +95,19 @@
     "moduleNameMapper": {
       "\\.(svg)$": "<rootDir>/__mocks__/fileMock.js"
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agneym/react-loading.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "loader",
+    "spinner"
+  ],
+  "bugs": {
+    "url": "https://github.com/agneym/react-loading/issues"
+  },
+  "homepage": "https://agneym.github.io/react-loading/"
 }
