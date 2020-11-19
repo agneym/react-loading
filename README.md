@@ -77,6 +77,7 @@ function Content() {
   );
 }
 ```
+[Sample](https://codesandbox.io/s/agneyreact-loading-example-9jj7c)
 
 ## Loaders
 
