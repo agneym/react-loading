@@ -36,7 +36,7 @@ yarn add @agney/react-loading
 
 - **Small Size**
 
-  The whole library is about [20kB minified](https://bundlephobia.com/result?p=@agney/react-loading). _But you would never need the whole bundle._
+  The entire library is about [20kB minified](https://bundlephobia.com/result?p=@agney/react-loading). _But you would never need the whole bundle._
 
   The library is build to be treeshakeable that when you use one or two of the bundled loaders, you would have **less than 1kB** in your bundle.
 
